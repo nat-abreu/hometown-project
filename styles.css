@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #1d3557;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-image: url("images/tokyo-background.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
+  height: 40vh;
+}
+
+.hero h1 {
+  font-family: "Zen Tokyo Zoo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 130px;
+  color: #a4243b;
+  text-shadow: 0 0 3px #d8c99b, 0 0 6px #d8c99b, 0 0 9px #d8c99b,
+    0 0 12px #d8c99b, 0 0 15px #d8c99b;
+  margin: 0;
+}
+
+.hero h2 {
+  width: 60%;
+  background: linear-gradient(to right, #d8973c, #bd632f);
+  color: #273e47;
+  text-shadow: 0px 0px 10px #e8caa0;
+  padding: 3px 15px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.activities {
+  background-color: #d8c99b;
+  padding-bottom: 19px;
+  border-bottom: 5px solid #1d3557;
+  border-top: 5px solid #1d3557;
+}
+
+.activities h3 {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.activities-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.activities-items-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.activities-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.activities-items img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 5px solid #a4243b;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.activities-items img:hover {
+  box-shadow: 0 0 0 10px #bd632f, 0 0 30px #bd632f;
+  transform: scale(1.05);
+}
+
+.activities-items h4 {
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.activities-items p {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.guide-div {
+  background-image: url("images/tokyo-background.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+  display: flex;
+  flex-direction: row;
+}
+
+.guide-wrapper {
+  margin: 50px auto;
+  padding: 30px 30px 10px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  background-color: #273e47;
+  border-radius: 10px;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  gap: 30px;
+  color: #fff;
+}
+
+.guide-wrapper img {
+  width: 248px;
+  height: 248px;
+  border-radius: 20px;
+}
+
+.guide-wrapper h3 {
+  font-size: 24px;
+}
+
+.guide-wrapper p {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.guide-img p {
+  text-align: center;
+}
+
+.guide-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.guide-items h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.guide-items h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tools-used {
+  margin: 0;
+  padding: 0px 0px 0px 15px;
+  text-align: left;
+  list-style-type: circle;
+  line-height: 1.5;
+}
