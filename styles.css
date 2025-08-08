@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   text-align: center;
@@ -11,18 +15,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 20px;
   background-image: url("images/tokyo-background.jpg");
   background-size: cover;
   background-position: 50% 20%;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 .hero h1 {
   font-family: "Zen Tokyo Zoo", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 130px;
+  font-size: clamp(60px, 10vw, 130px);
   color: #a4243b;
   text-shadow: 0 0 3px #d8c99b, 0 0 6px #d8c99b, 0 0 9px #d8c99b,
     0 0 12px #d8c99b, 0 0 15px #d8c99b;
@@ -30,7 +34,9 @@ body {
 }
 
 .hero h2 {
-  width: 60%;
+  width: 80%;
+  max-width: 800px;
+  font-size: clamp(16px, 2.5vw, 24px);
   background: linear-gradient(to right, #d8973c, #bd632f);
   color: #273e47;
   text-shadow: 0px 0px 10px #e8caa0;
@@ -47,7 +53,7 @@ body {
 }
 
 .activities h3 {
-  font-size: 25px;
+  font-size: clamp(20px, 4vw, 25px);
   font-weight: 800;
 }
 
@@ -60,7 +66,11 @@ body {
 .activities-items-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .activities-items {
@@ -72,8 +82,8 @@ body {
 }
 
 .activities-items img {
-  width: 240px;
-  height: 240px;
+  width: min(250px, 70vw);
+  height: min(250px, 70vw);
   border-radius: 50%;
   border: 5px solid #a4243b;
   transition: all 0.2s ease;
@@ -90,11 +100,13 @@ body {
   display: flex;
   align-items: center;
   margin: 0;
+  font-size: clamp(16px, 2.5vw, 20px);
 }
 
 .activities-items p {
   width: 70%;
   margin: 0 auto;
+  font-size: clamp(15px, 2vw, 16px);
 }
 
 .guide-div {
@@ -111,7 +123,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 50%;
+  width: min(90%, 800px);
   background-color: #273e47;
   border-radius: 10px;
   border-bottom: 5px solid #fff;
@@ -121,18 +133,18 @@ body {
 }
 
 .guide-wrapper img {
-  width: 248px;
-  height: 248px;
+  width: min(248px, 40vw);
+  height: min(248px, 40vw);
   border-radius: 20px;
 }
 
 .guide-wrapper h3 {
-  font-size: 24px;
+  font-size: clamp(22px, 2.5vw, 24px);
 }
 
 .guide-wrapper p {
   font-style: normal;
-  font-size: 16px;
+  font-size: clamp(15px, 2vw, 16px);
   line-height: 1.5;
   text-align: justify;
 }
@@ -164,4 +176,36 @@ body {
   text-align: left;
   list-style-type: circle;
   line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+    padding: 40px 20px;
+  }
+
+  .activities-items-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guide-wrapper {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+  }
+
+  .guide-items {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 10px;
+  }
+
+  .activities {
+    padding: 15px 10px;
+  }
 }
